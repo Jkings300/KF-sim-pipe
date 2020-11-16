@@ -1,0 +1,25 @@
+{"perflin": {
+    "name": "perflin",
+    "dt": 0.01,
+    "R": [10,10],
+    "multiple": {"run_names":["q0", "q10", "q1000"]},
+    "input": {"func":"separate_steps", "args":[[10, 20], [4000, 3600], [4000, 3000]]},
+    "filters":{"names":["perfect","perfect","perfect"],"Qvars": [[0,0],[10,10],[1000,1000]],"Rvars":[10,10,10]}
+  },
+  "hidden": {
+    "name": "hidden",
+    "dt": 0.01,
+    "R": [10,10],
+    "multiple": {"run_names": ["q11", "q22", "q1010"]},
+    "input": {"func":"separate_steps", "args":[[10, 20], [4000, 3600], [4000, 3000]]},
+    "filters": {"names":["NU4","NU4","NU4"],"Qvars": [[1, 1], [2, 2], [10, 10]],"Rvars":[10,10,10]}
+  },
+  "demo": {
+    "name": "demo",
+    "dt": 0.01,
+    "R": [10,10],
+    "multiple": {"run_names": ["h1", "h2", "p1"]},
+    "input": {"func":"separate_steps", "args":[[10, 20], [4000, 3600], [4000, 3000]]},
+    "filters": {"names":["NU4","NU4","perfect"],"Qvars": [[1,1],[5,5],[10,10]],"Rvars":[10,10,10]}
+  }
+}
